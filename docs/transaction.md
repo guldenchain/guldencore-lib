@@ -19,7 +19,7 @@ var transaction = new Transaction()
 
 You can obtain the input and output total amounts of the transaction in satoshis by accessing the fields `inputAmount` and `outputAmount`.
 
-Now, this could just be serialized to hexadecimal ASCII values (`transaction.serialize()`) and sent over to the guldend reference client.
+Now, this could just be serialized to hexadecimal ASCII values (`transaction.serialize()`) and sent over to the GuldenD reference client.
 
 ```bash
 gulden-cli sendrawtransaction <serialized transaction>
