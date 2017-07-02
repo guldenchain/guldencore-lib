@@ -1,5 +1,5 @@
 
 
-var litecoreTasks = require('litecore-build');
+var guldencoreTasks = require('guldencore-build');
 
-litecoreTasks('lib');
+guldencoreTasks('lib');

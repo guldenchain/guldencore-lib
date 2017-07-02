@@ -1,70 +1,70 @@
 'use strict';
 
-var litecore = module.exports;
+var guldencore = module.exports;
 
 // module information
-litecore.version = 'v' + require('./package.json').version;
-litecore.versionGuard = function(version) {
+guldencore.version = 'v' + require('./package.json').version;
+guldencore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of litecore-lib found. ' +
-      'Please make sure to require litecore-lib and check that submodules do' +
-      ' not also include their own litecore-lib dependency.';
+    var message = 'More than one instance of guldencore-lib found. ' +
+      'Please make sure to require guldencore-lib and check that submodules do' +
+      ' not also include their own guldencore-lib dependency.';
     throw new Error(message);
   }
 };
-litecore.versionGuard(global._litecore);
-global._litecore = litecore.version;
+guldencore.versionGuard(global._guldencore);
+global._guldencore = guldencore.version;
 
 // crypto
-litecore.crypto = {};
-litecore.crypto.BN = require('./lib/crypto/bn');
-litecore.crypto.ECDSA = require('./lib/crypto/ecdsa');
-litecore.crypto.Hash = require('./lib/crypto/hash');
-litecore.crypto.Random = require('./lib/crypto/random');
-litecore.crypto.Point = require('./lib/crypto/point');
-litecore.crypto.Signature = require('./lib/crypto/signature');
+guldencore.crypto = {};
+guldencore.crypto.BN = require('./lib/crypto/bn');
+guldencore.crypto.ECDSA = require('./lib/crypto/ecdsa');
+guldencore.crypto.Hash = require('./lib/crypto/hash');
+guldencore.crypto.Random = require('./lib/crypto/random');
+guldencore.crypto.Point = require('./lib/crypto/point');
+guldencore.crypto.Signature = require('./lib/crypto/signature');
 
 // encoding
-litecore.encoding = {};
-litecore.encoding.Base58 = require('./lib/encoding/base58');
-litecore.encoding.Base58Check = require('./lib/encoding/base58check');
-litecore.encoding.BufferReader = require('./lib/encoding/bufferreader');
-litecore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
-litecore.encoding.Varint = require('./lib/encoding/varint');
+guldencore.encoding = {};
+guldencore.encoding.Base58 = require('./lib/encoding/base58');
+guldencore.encoding.Base58Check = require('./lib/encoding/base58check');
+guldencore.encoding.BufferReader = require('./lib/encoding/bufferreader');
+guldencore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
+guldencore.encoding.Varint = require('./lib/encoding/varint');
 
 // utilities
-litecore.util = {};
-litecore.util.buffer = require('./lib/util/buffer');
-litecore.util.js = require('./lib/util/js');
-litecore.util.preconditions = require('./lib/util/preconditions');
+guldencore.util = {};
+guldencore.util.buffer = require('./lib/util/buffer');
+guldencore.util.js = require('./lib/util/js');
+guldencore.util.preconditions = require('./lib/util/preconditions');
 
 // errors thrown by the library
-litecore.errors = require('./lib/errors');
+guldencore.errors = require('./lib/errors');
 
 // main bitcoin library
-litecore.Address = require('./lib/address');
-litecore.Block = require('./lib/block');
-litecore.MerkleBlock = require('./lib/block/merkleblock');
-litecore.BlockHeader = require('./lib/block/blockheader');
-litecore.HDPrivateKey = require('./lib/hdprivatekey.js');
-litecore.HDPublicKey = require('./lib/hdpublickey.js');
-litecore.Networks = require('./lib/networks');
-litecore.Opcode = require('./lib/opcode');
-litecore.PrivateKey = require('./lib/privatekey');
-litecore.PublicKey = require('./lib/publickey');
-litecore.Script = require('./lib/script');
-litecore.Transaction = require('./lib/transaction');
-litecore.URI = require('./lib/uri');
-litecore.Unit = require('./lib/unit');
+guldencore.Address = require('./lib/address');
+guldencore.Block = require('./lib/block');
+guldencore.MerkleBlock = require('./lib/block/merkleblock');
+guldencore.BlockHeader = require('./lib/block/blockheader');
+guldencore.HDPrivateKey = require('./lib/hdprivatekey.js');
+guldencore.HDPublicKey = require('./lib/hdpublickey.js');
+guldencore.Networks = require('./lib/networks');
+guldencore.Opcode = require('./lib/opcode');
+guldencore.PrivateKey = require('./lib/privatekey');
+guldencore.PublicKey = require('./lib/publickey');
+guldencore.Script = require('./lib/script');
+guldencore.Transaction = require('./lib/transaction');
+guldencore.URI = require('./lib/uri');
+guldencore.Unit = require('./lib/unit');
 
 // dependencies, subject to change
-litecore.deps = {};
-litecore.deps.bnjs = require('bn.js');
-litecore.deps.bs58 = require('bs58');
-litecore.deps.Buffer = Buffer;
-litecore.deps.elliptic = require('elliptic');
-litecore.deps.scryptsy = require('scryptsy');
-litecore.deps._ = require('lodash');
+guldencore.deps = {};
+guldencore.deps.bnjs = require('bn.js');
+guldencore.deps.bs58 = require('bs58');
+guldencore.deps.Buffer = Buffer;
+guldencore.deps.elliptic = require('elliptic');
+guldencore.deps.scryptsy = require('scryptsy');
+guldencore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
-litecore.Transaction.sighash = require('./lib/transaction/sighash');
+guldencore.Transaction.sighash = require('./lib/transaction/sighash');
