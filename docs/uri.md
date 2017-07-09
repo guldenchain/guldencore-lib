@@ -1,5 +1,5 @@
-# Bitcoin URIs
-Represents a gulden payment URI. Bitcoin URI strings became the most popular way to share payment request, sometimes as a gulden link and others using a QR code.
+# Gulden URIs
+Represents a gulden payment URI. Gulden URI strings became the most popular way to share payment request, sometimes as a gulden link and others using a QR code.
 
 URI Examples:
 

@@ -1340,7 +1340,7 @@ describe('Transaction', function() {
         var valid = signedTx.inputs[0].isValidSignature(signedTx, signedTx.inputs[0].signatures[0]);
         valid.should.equal(true);
       });
-      describe('Bitcoin Core tests', function() {
+      describe('Gulden Core tests', function() {
         // from bitcoin core tests at src/test/transaction_tests.cpp
         it('will verify pay-to-compressed publickey (v0) part 1', function() {
           var check;

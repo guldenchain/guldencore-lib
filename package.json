@@ -1,6 +1,6 @@
 {
   "name": "guldencore-lib",
-  "version": "0.13.23",
+  "version": "0.13.24",
   "description": "A pure and powerful JavaScript Gulden library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
@@ -12,8 +12,12 @@
   },
   "contributors": [
     {
+      "name": "Gregory de Graaf aka Strataghyt",
+      "email": "guldenchain@gmail.com"
+    },
+    {
       "name": "Charlie Lee",
-      "email": "coblee@gulden.org"
+      "email": "coblee@litecoin.org"
     },
     {
       "name": "Daniel Cousens",

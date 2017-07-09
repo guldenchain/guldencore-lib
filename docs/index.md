@@ -17,10 +17,10 @@ To get started, just `npm install guldencore` or `bower install guldencore`.
 
 ## Payment Handling
 * [Using Different Units](unit.md)
-* [Acknowledging and Requesting Payments: Bitcoin URIs](uri.md)
+* [Acknowledging and Requesting Payments: Gulden URIs](uri.md)
 * [The Transaction Class](transaction.md)
 
-## Bitcoin Internals
+## Gulden Internals
 * [Scripts](script.md)
 * [Block](block.md)
 
@@ -37,7 +37,7 @@ Some functionality is implemented as a module that can be installed separately:
 
 * [Payment Protocol Support](https://github.com/bitpay/bitcore-payment-protocol)
 * [Peer to Peer Networking](https://github.com/guldenchain/guldencore-p2p)
-* [Bitcoin Core JSON-RPC](https://github.com/bitpay/bitcoind-rpc)
+* [Gulden Core JSON-RPC](https://github.com/bitpay/bitcoind-rpc)
 * [Payment Channels](https://github.com/bitpay/bitcore-channel)
 * [Mnemonics](https://github.com/bitpay/bitcore-mnemonic)
 * [Elliptical Curve Integrated Encryption Scheme](https://github.com/bitpay/bitcore-ecies)

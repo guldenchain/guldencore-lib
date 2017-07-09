@@ -458,7 +458,7 @@ Address.prototype.isPayToScriptHash = function() {
 /**
  * Will return a buffer representation of the address
  *
- * @returns {Buffer} Bitcoin address buffer
+ * @returns {Buffer} Gulden address buffer
  */
 Address.prototype.toBuffer = function() {
   var version = new Buffer([this.network[this.type]]);
@@ -480,7 +480,7 @@ Address.prototype.toObject = Address.prototype.toJSON = function toObject() {
 /**
  * Will return a the string representation of the address
  *
- * @returns {string} Bitcoin address
+ * @returns {string} Gulden address
  */
 Address.prototype.toString = function() {
   return Base58Check.encode(this.toBuffer());
@@ -489,7 +489,7 @@ Address.prototype.toString = function() {
 /**
  * Will return a string formatted for the console
  *
- * @returns {string} Bitcoin address
+ * @returns {string} Gulden address
  */
 Address.prototype.inspect = function() {
   return '<Address: ' + this.toString() + ', type: ' + this.type + ', network: ' + this.network + '>';
@@ -1246,7 +1246,7 @@ MerkleBlock.prototype.validMerkleTree = function validMerkleTree() {
 
 /**
  * Traverse a the tree in this MerkleBlock, validating it along the way
- * Modeled after Bitcoin Core merkleblock.cpp TraverseAndExtract()
+ * Modeled after Gulden Core merkleblock.cpp TraverseAndExtract()
  * @param {Number} - depth - Current height
  * @param {Number} - pos - Current position in the tree
  * @param {Object} - opts - Object with values that need to be mutated throughout the traversal
@@ -1289,7 +1289,7 @@ MerkleBlock.prototype._traverseMerkleTree = function traverseMerkleTree(depth, p
 };
 
 /** Calculates the width of a merkle tree at a given height.
- *  Modeled after Bitcoin Core merkleblock.h CalcTreeWidth()
+ *  Modeled after Gulden Core merkleblock.h CalcTreeWidth()
  * @param {Number} - Height at which we want the tree width
  * @returns {Number} - Width of the tree at a given height
  * @private
@@ -3757,7 +3757,7 @@ HDPrivateKey.fromSeed = function(hexa, network) {
   if (hexa.length > MAXIMUM_ENTROPY_BITS * BITS_TO_BYTES) {
     throw new hdErrors.InvalidEntropyArgument.TooMuchEntropy(hexa);
   }
-  var hash = Hash.sha512hmac(hexa, new buffer.Buffer('Bitcoin seed'));
+  var hash = Hash.sha512hmac(hexa, new buffer.Buffer('Gulden seed'));
 
   return new HDPrivateKey({
     network: Network.get(network) || Network.defaultNetwork,
@@ -5829,7 +5829,7 @@ var Signature = require('../crypto/signature');
 var PublicKey = require('../publickey');
 
 /**
- * Bitcoin transactions contain scripts. Each input has a script called the
+ * Gulden transactions contain scripts. Each input has a script called the
  * scriptSig, and each output has a script called the scriptPubkey. To validate
  * an input, the input's script is concatenated with the referenced output script,
  * and the result is executed. If at the end of execution the stack contains a
@@ -11124,7 +11124,7 @@ URI.prototype.toObject = URI.prototype.toJSON = function toObject() {
 /**
  * Will return a the string representation of the URI
  *
- * @returns {string} Bitcoin URI string
+ * @returns {string} Gulden URI string
  */
 URI.prototype.toString = function() {
   var query = {};
@@ -11152,7 +11152,7 @@ URI.prototype.toString = function() {
 /**
  * Will return a string formatted for the console
  *
- * @returns {string} Bitcoin URI
+ * @returns {string} Gulden URI
  */
 URI.prototype.inspect = function() {
   return '<URI: ' + this.toString() + '>';
@@ -52150,7 +52150,7 @@ if (typeof Object.create === 'function') {
 module.exports={
   "name": "bitcore-lib",
   "version": "0.13.19",
-  "description": "A pure and powerful JavaScript Bitcoin library.",
+  "description": "A pure and powerful JavaScript Gulden library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {

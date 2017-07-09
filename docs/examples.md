@@ -40,7 +40,7 @@ var transaction = new guldencore.Transaction()
   .sign(privateKey);
 ```
 
-## Sign a Bitcoin message
+## Sign a Gulden message
 ```javascript
 var Message = require('guldencore-message');
 
@@ -50,7 +50,7 @@ var message = new Message('This is an example of a signed message.');
 var signature = message.sign(privateKey);
 ```
 
-## Verify a Bitcoin message
+## Verify a Gulden message
 ```javascript
 var Message = require('guldencore-message');
 
